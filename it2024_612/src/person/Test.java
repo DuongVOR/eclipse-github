@@ -12,6 +12,7 @@ public class Test {
 		System.out.println("Nhap vao so luong sinh vien: ");
 		n = sc.nextInt();
 		while (i < n) {
+			p[i] = new Person();
 			System.out.println("Nhap vao ten nguoi thu " + (i + 1) + ":");
 			a = sc.next();
 			p[i].setName(a);
@@ -30,7 +31,19 @@ public class Test {
 			System.out.println("Nhap vao so dien thoai nguoi thu " + (i + 1) + ":");
 			a = sc.next();
 			p[i].setPhone(a);
-			sc.close();
+			i++;
 		}
+		i = 0;
+		while (i < n) {
+			System.out.println("Nguoi thu" + (i + 1) + ": ");
+			System.out.println("Ten:" + p[i].getName());
+			System.out.println("Sinh ngay: " + p[i].getDob());
+			System.out.println("Noi sinh: " + p[i].getPod());
+			System.out.println("Gioi tinh: " + p[i].getGender());
+			System.out.println("Dia chi Email: " + p[i].getEmail());
+			System.out.println("So dien thoai: " + p[i].getPhone());
+			i++;
+		}
+		sc.close();
 	}
 }
