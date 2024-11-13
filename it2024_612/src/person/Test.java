@@ -6,31 +6,27 @@ public class Test {
 	public static void main(String[] args) {
 		Person[] p = new Person[10];
 		Scanner sc = new Scanner(System.in);
-		int i = 0, n;
-		String a;
-		char g;
+		int i = 0;
 		System.out.println("Nhap vao so luong sinh vien: ");
-		n = sc.nextInt();
+		int n = sc.nextInt();
+		sc.nextLine();
 		while (i < n) {
 			p[i] = new Person();
 			System.out.println("Nhap vao ten nguoi thu " + (i + 1) + ":");
-			a = sc.next();
-			p[i].setName(a);
+			p[i].setName(sc.nextLine());
 			System.out.println("Nhap vao ngay sinh nguoi thu " + (i + 1) + ":");
-			a = sc.next();
-			p[i].setDob(a);
+			p[i].setDob(sc.nextLine());
 			System.out.println("Nhap vao noi sinh nguoi thu " + (i + 1) + ":");
-			a = sc.next();
-			p[i].setPod(a);
+			p[i].setPod(sc.nextLine());
 			System.out.println("Nhap vao gioi tinh nguoi thu " + (i + 1) + ":");
-			g = sc.next().charAt(0);
-			p[i].setGender(g);
+			p[i].setGender(sc.nextLine().charAt(0));
 			System.out.println("Nhap vao email nguoi thu " + (i + 1) + ":");
-			a = sc.next();
-			p[i].setEmail(a);
+			p[i].setEmail(sc.nextLine());
 			System.out.println("Nhap vao so dien thoai nguoi thu " + (i + 1) + ":");
-			a = sc.next();
-			p[i].setPhone(a);
+			p[i].setPhone(sc.nextLine());
+			System.out.println("Nhap vao tuoi nguoi thu " + (i + 1) + ":");
+			p[i].setOld(sc.nextInt());
+			sc.nextLine();
 			i++;
 		}
 		i = 0;
@@ -42,6 +38,7 @@ public class Test {
 			System.out.println("Gioi tinh: " + p[i].getGender());
 			System.out.println("Dia chi Email: " + p[i].getEmail());
 			System.out.println("So dien thoai: " + p[i].getPhone());
+			System.out.println("Noi sinh: " + p[i].getOld());
 			i++;
 		}
 		sc.close();

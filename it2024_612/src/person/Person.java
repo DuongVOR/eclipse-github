@@ -8,18 +8,20 @@ public class Person {
 	protected char gender;
 	protected String email;
 	protected String phone;
+	protected int old;
 
 	// Phuong thuc tao constructor
 	public Person() {
 	}
 
-	public Person(String name, String dob, String pod, char gender, String email, String phone) {
+	public Person(String name, String dob, String pod, char gender, String email, String phone, int old) {
 		this.name = name;
 		this.dob = dob;
 		this.pod = pod;
 		this.gender = gender;
 		this.email = email;
 		this.phone = phone;
+		this.old = old;
 	}
 
 	// Phuong thuc setter and getter
@@ -71,10 +73,18 @@ public class Person {
 		this.phone = phone;
 	}
 
+	public int getOld() {
+		return old;
+	}
+
+	public void setOld(int old) {
+		this.old = old;
+	}
+
 	// Phuong thuc toString
 	@Override
 	public String toString() {
 		return "Person [name=" + name + ", dob=" + dob + ", pod=" + pod + ", gender=" + gender + ", email=" + email
-				+ ", phone=" + phone + "]";
+				+ ", phone=" + phone + ", old=" + old + "]";
 	}
 }
