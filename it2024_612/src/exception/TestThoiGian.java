@@ -3,18 +3,16 @@ package exception;
 import java.util.Scanner;
 
 public class TestThoiGian {
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InvalidDateException {
 		Scanner sc = new Scanner(System.in);
 		int day, year, month;
+		System.out.println("Nhap ngay: ");
 		day = sc.nextInt();
+		System.out.println("Nhap thang: ");
 		month = sc.nextInt();
 		System.out.println("Nhap nam: ");
 		year = sc.nextInt();
-		ThoiGian tg = new ThoiGian();
-		tg.setDay(day);
-		tg.setMonth(month);
-		tg.setYear(year);
-		System.out.println(tg);
+		ThoiGian tg = new ThoiGian(day, month, year);
 		sc.close();
 	}
 }

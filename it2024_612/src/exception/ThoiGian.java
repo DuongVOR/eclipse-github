@@ -10,14 +10,14 @@ public class ThoiGian {
 
 	public ThoiGian(int day, int month, int year) {
 		try {
-			this.day = day;
-			this.month = month;
-			this.year = year;
-			if (day > 31 || month > 12)
-				day = -1;
-		} catch (NumberFormatException e) {
-			System.out.println(e.toString());
+			InvalidDate(day, month, year);
+		} catch (InvalidDateException e) {
+			e.printStackTrace();
 		}
+		this.day = day;
+		this.month = month;
+		this.year = year;
+
 	}
 
 	public int getDay() {
@@ -49,4 +49,8 @@ public class ThoiGian {
 		return "ThoiGian [day=" + day + ", month=" + month + ", year=" + year + "]";
 	}
 
+	public static void InvalidDate(int day, int month, int year) throws InvalidDateException {
+		if (day > 31 || month > 12)
+			throw new InvalidDateException("Oh no ban nhap sai gi roi!");
+	}
 }
