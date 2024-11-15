@@ -10,7 +10,7 @@ public class ThoiGian {
 
 	public ThoiGian(int day, int month, int year) {
 		try {
-			InvalidDate(day, month, year);
+			InvalidDate(day, month);
 		} catch (InvalidDateException e) {
 			e.printStackTrace();
 		}
@@ -49,7 +49,7 @@ public class ThoiGian {
 		return "ThoiGian [day=" + day + ", month=" + month + ", year=" + year + "]";
 	}
 
-	public static void InvalidDate(int day, int month, int year) throws InvalidDateException {
+	public static void InvalidDate(int day, int month) throws InvalidDateException {
 		if (day > 31 || month > 12)
 			throw new InvalidDateException("Oh no ban nhap sai gi roi!");
 	}

@@ -1,4 +1,4 @@
-package chuong_3;
+package circle;
 
 public interface GeomeTricObject {
 	public double getPerimeter();

@@ -1,4 +1,4 @@
-package chuong_3;
+package circle;
 
 public class Circle implements GeomeTricObject {
 	// hang so

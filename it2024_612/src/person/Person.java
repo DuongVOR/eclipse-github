@@ -14,6 +14,10 @@ public class Person {
 	public Person() {
 	}
 
+	public Person(String name) {
+		this.name = name;
+	}
+
 	public Person(String name, String dob, String pod, char gender, String email, String phone, int old) {
 		this.name = name;
 		this.dob = dob;

@@ -1,4 +1,4 @@
-package chuong_3;
+package circle;
 
 public class ResizableCircle extends Circle implements Resizable {
 	public ResizableCircle(double radius) {
