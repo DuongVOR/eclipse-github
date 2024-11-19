@@ -44,7 +44,7 @@ public class BenhNhan extends Nguoi {
 
 	@Override
 	public String toString() {
-		return super.toString() + "BenhNhan [tienSu=" + tienSu + ", chuanDoan=" + chuanDoan + ", BenhVien="
+		return super.toString() + "BenhNhan: tienSu=" + tienSu + ", chuanDoan=" + chuanDoan + ", BenhVien="
 				+ BenhVien.toString() + "]";
 	}
 
