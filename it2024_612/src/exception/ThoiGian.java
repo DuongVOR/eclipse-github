@@ -25,7 +25,12 @@ public class ThoiGian {
 	}
 
 	public void setDay(int day) {
-		this.day = day;
+		try {
+			InvalidDate(day, 1);
+			this.day = day;
+		} catch (InvalidDateException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public int getMonth() {
@@ -33,7 +38,12 @@ public class ThoiGian {
 	}
 
 	public void setMonth(int month) {
-		this.month = month;
+		try {
+			this.month = month;
+			InvalidDate(1, month);
+		} catch (InvalidDateException e) {
+			e.printStackTrace();
+		}
 	}
 
 	public int getYear() {
